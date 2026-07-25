@@ -85,7 +85,7 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         }
       : undefined;
 
-    const CardWrapper = enableAnimation ? motion.div : 'div';
+    const CardWrapper = (enableAnimation ? motion.div : 'div') as any;
 
     return (
       <CardWrapper

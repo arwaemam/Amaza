@@ -99,7 +99,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // For now, we'll render as a regular button
     }
 
-    const ButtonComponent = enableMotion ? motion.button : 'button';
+    const ButtonComponent = (enableMotion ? motion.button : 'button') as any;
     const motionProps = enableMotion && !isDisabled 
       ? {
           variants: buttonAnimationVariants,

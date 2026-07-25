@@ -5,6 +5,7 @@
  * and property-based testing generators for the AmazePMS website.
  */
 
+declare const jest: any;
 import { render, RenderOptions } from '@testing-library/react';
 import { ReactElement, ReactNode } from 'react';
 import * as fc from 'fast-check';
@@ -39,7 +40,7 @@ export { customRender as render };
 // Button variant generator
 export const buttonVariantArb = fc.constantFrom(
   'primary',
-  'secondary', 
+  'secondary',
   'outline',
   'ghost',
   'glass'
@@ -89,7 +90,7 @@ export const urlArb = fc.record({
   domain: fc.stringOf(fc.constantFrom(...'abcdefghijklmnopqrstuvwxyz0123456789-'), { minLength: 3, maxLength: 15 }),
   tld: fc.constantFrom('com', 'org', 'net', 'co', 'io'),
   path: fc.option(fc.stringOf(fc.constantFrom(...'abcdefghijklmnopqrstuvwxyz0123456789-/'), { maxLength: 20 }))
-}).map(({ protocol, domain, tld, path }) => 
+}).map(({ protocol, domain, tld, path }) =>
   `${protocol}://${domain}.${tld}${path ? `/${path}` : ''}`
 );
 
@@ -181,15 +182,15 @@ export const isFocusable = (element: Element) => {
     'a[href]',
     '[tabindex]:not([tabindex="-1"])'
   ];
-  
-  return focusableElements.some(selector => element.matches(selector)) || 
-         element.getAttribute('tabindex') === '0';
+
+  return focusableElements.some(selector => element.matches(selector)) ||
+    element.getAttribute('tabindex') === '0';
 };
 
 // Check if color meets WCAG contrast requirements
 export const meetsContrastRequirement = (
-  foreground: string, 
-  background: string, 
+  foreground: string,
+  background: string,
   level: 'AA' | 'AAA' = 'AA'
 ): boolean => {
   // This is a simplified version - in a real app you'd use a proper color contrast library
@@ -208,12 +209,12 @@ const calculateContrastRatio = (color1: string, color2: string): number => {
 export const respectsReducedMotion = (element: Element) => {
   const computedStyle = window.getComputedStyle(element);
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  
+
   if (prefersReducedMotion) {
-    return computedStyle.animationDuration === '0.01ms' || 
-           computedStyle.transitionDuration === '0.01ms';
+    return computedStyle.animationDuration === '0.01ms' ||
+      computedStyle.transitionDuration === '0.01ms';
   }
-  
+
   return true;
 };
 
@@ -247,7 +248,7 @@ export const mockResizeObserver = () => {
 export const mockMatchMedia = (matches: boolean = false) => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
-    value: jest.fn().mockImplementation(query => ({
+    value: jest.fn().mockImplementation((query: string) => ({
       matches,
       media: query,
       onchange: null,

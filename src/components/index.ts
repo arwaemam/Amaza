@@ -1,6 +1,7 @@
 // Export all components from a central location
 
 // UI Components
+export { buttonVariants, modalVariants, featureCardVariants } from './ui';
 export * from './ui';
 
 // Layout Components  

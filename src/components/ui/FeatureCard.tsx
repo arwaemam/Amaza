@@ -76,9 +76,9 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
       ? {
           ...featureCardAnimations,
           visible: {
-            ...featureCardAnimations.visible,
+            ...(featureCardAnimations.visible as any),
             transition: {
-              ...featureCardAnimations.visible.transition,
+              ...(featureCardAnimations.visible as any)?.transition,
               delay,
             },
           },

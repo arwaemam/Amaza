@@ -26,6 +26,7 @@ const REDUCED_MOTION_CONFIG = {
   duration: 0.01,
   ease: 'none',
   stagger: 0,
+  delay: 0,
 };
 
 // Performance configuration
@@ -242,7 +243,7 @@ const setupComplexReveals = (reducedMotion: boolean): void => {
         duration: reducedMotion ? 0.01 : 1.2,
         ease: 'power2.out',
         scrollTrigger: {
-          trigger: section,
+          trigger: section as Element,
           start: 'top 85%',
           toggleActions: 'play none none reverse',
         }
@@ -609,7 +610,7 @@ export const createParallax = (
       yPercent,
       ease: 'none',
       scrollTrigger: {
-        trigger: triggerSelector || element,
+        trigger: triggerSelector || (element as Element),
         start: 'top bottom',
         end: 'bottom top',
         scrub: 1

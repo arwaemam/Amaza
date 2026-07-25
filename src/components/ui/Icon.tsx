@@ -30,7 +30,7 @@ const iconVariants = cva('flex-shrink-0', {
 });
 
 export interface IconProps
-  extends React.SVGProps<SVGSVGElement>,
+  extends Omit<React.SVGProps<SVGSVGElement>, 'color'>,
     VariantProps<typeof iconVariants> {
   icon: LucideIcon;
   'aria-label'?: string;

@@ -140,7 +140,7 @@ export const formFieldArb = fc.record({
   type: fc.constantFrom('text', 'email', 'password', 'tel', 'url', 'number'),
   required: fc.boolean(),
   placeholder: fc.option(fc.string({ minLength: 5, maxLength: 50 })),
-  label: fc.string({ minLength: 2, max: 30 })
+  label: fc.string({ minLength: 2, maxLength: 30 })
 });
 
 // Card variant generator

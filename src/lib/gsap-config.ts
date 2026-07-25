@@ -16,7 +16,6 @@ if (typeof window !== 'undefined') {
 // GSAP Global Configuration
 gsap.config({
   nullTargetWarn: false,
-  trialWarn: false,
 });
 
 // Set global defaults

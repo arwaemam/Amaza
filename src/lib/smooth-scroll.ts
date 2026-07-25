@@ -218,9 +218,9 @@ export const initSmoothScroll = (options: SmoothScrollOptions = {}): SmoothScrol
     // Handle visibility change to pause/resume scroll
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        stop();
+        lenis?.stop();
       } else {
-        start();
+        lenis?.start();
       }
     };
     

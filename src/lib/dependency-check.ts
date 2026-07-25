@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Dependency Check and Configuration Validation
  * Validates that all required dependencies are properly installed and configured

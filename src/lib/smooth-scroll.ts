@@ -5,6 +5,7 @@
  * with performance optimizations and accessibility considerations.
  */
 
+/* eslint-disable no-console */
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

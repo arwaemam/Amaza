@@ -74,8 +74,7 @@ const defaultTestimonials: Testimonial[] = [
     author: {
       name: "Sarah Chen",
       title: "General Manager",
-      company: "Oceanview Resort & Spa",
-      avatar: "/avatars/sarah-chen.jpg"
+      company: "Oceanview Resort & Spa"
     },
     rating: 5,
     featured: true
@@ -86,8 +85,7 @@ const defaultTestimonials: Testimonial[] = [
     author: {
       name: "Michael Rodriguez",
       title: "Operations Director",
-      company: "Metropolitan Hotels Group",
-      avatar: "/avatars/michael-rodriguez.jpg"
+      company: "Metropolitan Hotels Group"
     },
     rating: 5
   },
@@ -97,8 +95,7 @@ const defaultTestimonials: Testimonial[] = [
     author: {
       name: "Emma Thompson",
       title: "Property Owner",
-      company: "Boutique Inns Collection",
-      avatar: "/avatars/emma-thompson.jpg"
+      company: "Boutique Inns Collection"
     },
     rating: 5,
     featured: true
@@ -109,8 +106,7 @@ const defaultTestimonials: Testimonial[] = [
     author: {
       name: "David Park",
       title: "Revenue Manager",
-      company: "Luxury Vacation Rentals",
-      avatar: "/avatars/david-park.jpg"
+      company: "Luxury Vacation Rentals"
     },
     rating: 5
   },
@@ -120,8 +116,7 @@ const defaultTestimonials: Testimonial[] = [
     author: {
       name: "Lisa Johnson",
       title: "Multi-Property Owner",
-      company: "Johnson Hospitality",
-      avatar: "/avatars/lisa-johnson.jpg"
+      company: "Johnson Hospitality"
     },
     rating: 5
   },
@@ -131,8 +126,7 @@ const defaultTestimonials: Testimonial[] = [
     author: {
       name: "Robert Kim",
       title: "Hotel Manager",
-      company: "Grand Plaza Hotel",
-      avatar: "/avatars/robert-kim.jpg"
+      company: "Grand Plaza Hotel"
     },
     rating: 5,
     featured: true

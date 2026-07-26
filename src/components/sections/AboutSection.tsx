@@ -75,7 +75,7 @@ export const AboutSection: React.FC<{ className?: string }> = ({ className }) =>
 
       {/* Values Section */}
       <section className="section-padding bg-neutral-900 text-white relative">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay" />
+
         <div className="container-section relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Core Values</h2>

@@ -208,7 +208,7 @@ export const ResourcesSection: React.FC<{ className?: string }> = ({ className }
           viewport={{ once: true }}
           className="bg-primary-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay" />
+
           <div className="absolute -top-24 -left-24 w-64 h-64 bg-primary-500 rounded-full blur-3xl opacity-50" />
           <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary-500 rounded-full blur-3xl opacity-50" />
           

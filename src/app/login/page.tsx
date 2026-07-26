@@ -139,7 +139,7 @@ export default function LoginPage() {
 
       {/* Right Panel: Graphic/Illustration */}
       <div className="relative hidden w-0 flex-1 lg:block bg-neutral-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay z-10" />
+
         
         {/* Animated Orbs */}
         <motion.div 
